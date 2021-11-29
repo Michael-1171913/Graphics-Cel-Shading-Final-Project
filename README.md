@@ -23,7 +23,8 @@ For example, to create a new branch 'name-of-your-branch-here' and go to it
 git checkout -b name-of-your-branch-here
 ```
 
-In git bash to the left of your cursor it'll show you what branch you're on, ex.
+In git bash to the left of your cursor it'll show you what branch you're on.
+ex.
 ```
 michael.leonard@JOYCE101-06 MINGW64 /c/Users/michael.leonard/Desktop/Graphics Cel Shading Final Project (name-of-your-branch-here)
                                                                                                           ^

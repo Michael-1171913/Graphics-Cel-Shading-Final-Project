@@ -21,7 +21,8 @@
 			</items>
 			<itemvalues />
 			<variables>
-				<variable type="float4x4" name="matVP" system="ViewProjection" />
+				<variable type="float4x4" name="proj_matrix" system="Projection" />
+				<variable type="float4x4" name="view_matrix" system="View" />
 				<variable type="float4x4" name="matGeo" system="GeometryTransform" />
 			</variables>
 			<macros />
@@ -35,8 +36,8 @@
 		<entry type="file" name="Simple" shader="vs" />
 		<entry type="camera" fp="false">
 			<distance>4</distance>
-			<pitch>28</pitch>
-			<yaw>317</yaw>
+			<pitch>-15</pitch>
+			<yaw>158</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0" g="0" b="0" a="0" />

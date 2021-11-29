@@ -23,6 +23,13 @@ For example, to create a new branch 'my-branch-name' and go to it
 git checkout -b my-branch-name
 ```
 
+In git bash to the left of your cursor it'll show you what branch you're on, ex.
+```console
+michael.leonard@JOYCE101-06 MINGW64 /c/Users/michael.leonard/Desktop/Graphics Cel Shading Final Project (main)
+                                                                                                          ^
+                                                                                                          |
+```
+
 ### To go to a different branch
 
 For example, to go to branch 'main'

@@ -5,7 +5,7 @@
 ### To clone the project
 
 Navigate to a folder in git bash and type
-```bash
+```console
 git clone https://github.com/Michael-1171913/Graphics-Cel-Shading-Final-Project.git
 ```
 
@@ -13,33 +13,33 @@ git clone https://github.com/Michael-1171913/Graphics-Cel-Shading-Final-Project.
 
 Always base your branch off the main branch,
 run this in git bash before creating a new branch
-```bash
+```console
 git checkout main
 git pull
 ```
 
 For example, to create a new branch 'my-branch-name' and go to it
-```bash
+```console
 git checkout -b my-branch-name
 ```
 
 ### To go to a different branch
 
 For example, to go to branch 'main'
-```bash
+```console
 git checkout main
 ```
 
 ### To upload your code to github
 
-```bash
+```console
 git add .
 git commit -m "commit message"
 git push
 ```
 
 It might say "To push the current branch and set the remote as upstream, use"
-```bash
+```console
 git push --set-upstream origin name-of-your-branch-here
 ```
 

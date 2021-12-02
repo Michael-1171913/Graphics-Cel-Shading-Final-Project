@@ -11,12 +11,11 @@
 			</inputlayout>
 			<rendertexture />
 			<items>
-				<item name="Box" type="geometry">
-					<type>Cube</type>
-					<width>1</width>
-					<height>1</height>
-					<depth>1</depth>
-					<topology>TriangleList</topology>
+				<item name="Bird" type="model">
+					<filepath>3D Objects\bird.obj</filepath>
+					<grouponly>false</grouponly>
+					<y>-3.15094852</y>
+					<z>-0.624910355</z>
 				</item>
 			</items>
 			<itemvalues />
@@ -29,8 +28,11 @@
 		</pass>
 	</pipeline>
 	<objects>
-		<object type="texture" path="..\..\..\Desktop\Win64\SHADERed\icon_256x256.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
+		<object type="texture" path="Textures\bird texture.png" vflip="true" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
 			<bind slot="0" name="Simple" />
+		</object>
+		<object type="texture" path="Textures\Bbkt_eye.4.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
+			<bind slot="1" name="Simple" />
 		</object>
 	</objects>
 	<cameras />
@@ -38,9 +40,9 @@
 		<entry type="file" name="Simple" shader="ps" />
 		<entry type="file" name="Simple" shader="vs" />
 		<entry type="camera" fp="false">
-			<distance>4</distance>
-			<pitch>40</pitch>
-			<yaw>136</yaw>
+			<distance>20</distance>
+			<pitch>31</pitch>
+			<yaw>146</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0" g="0" b="0" a="0" />

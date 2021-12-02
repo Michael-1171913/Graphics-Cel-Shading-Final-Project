@@ -14,11 +14,11 @@ mat4 modelView = view_matrix * matGeo;
 
 
 // Light and material properties
- vec3 light_pos = vec3(0, 100.0, 100.0);
+ vec3 light_pos = vec3(0, 100.0, 0);
  vec3 diffuse_albedo = vec3(1);
- vec3 specular_albedo = vec3(0.7);
+ vec3 specular_albedo = vec3(1);
  float specular_power = 128.0;
- vec3 ambient = vec3(.2);
+ vec3 ambient = vec3(0);
 
 // Outputs to the fragment shader
 out vec4 color; 

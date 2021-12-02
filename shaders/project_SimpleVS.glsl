@@ -3,6 +3,7 @@
 // Per-vertex inputs
 layout (location = 0) in vec3 pos;
 layout (location = 1) in vec3 normal;
+layout (location = 2) in vec2 texCoord;
 
 // Matrices we'll need
 uniform mat4 matGeo;
@@ -13,14 +14,15 @@ mat4 modelView = view_matrix * matGeo;
 
 
 // Light and material properties
- vec3 light_pos = vec3(100.0, 100.0, 100.0);
- vec3 diffuse_albedo = vec3(0.5, 0.2, 0.7);
+ vec3 light_pos = vec3(0, 100.0, 100.0);
+ vec3 diffuse_albedo = vec3(1);
  vec3 specular_albedo = vec3(0.7);
  float specular_power = 128.0;
- vec3 ambient = vec3(0.1, 0.1, 0.1);
+ vec3 ambient = vec3(.2);
 
 // Outputs to the fragment shader
 out vec4 color; 
+out vec2 uv;
 
 void main(void)
 {
@@ -51,6 +53,7 @@ void main(void)
     // Send the color output to the fragment shader
     color = vec4(ambient, 1) + vec4(diffuse, 1) + vec4(specular, 1); 
     //color = vec4(1);
+    uv = texCoord;
 
     // Calculate the clip-space position of each vertex
     gl_Position = proj_matrix * P;

@@ -28,16 +28,19 @@
 			<macros />
 		</pass>
 	</pipeline>
-	<objects />
+	<objects>
+		<object type="texture" path="..\..\..\Desktop\Win64\SHADERed\icon_256x256.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
+			<bind slot="0" name="Simple" />
+		</object>
+	</objects>
 	<cameras />
 	<settings>
-		<entry type="property" name="Simple" item="pipe" />
 		<entry type="file" name="Simple" shader="ps" />
 		<entry type="file" name="Simple" shader="vs" />
 		<entry type="camera" fp="false">
 			<distance>4</distance>
-			<pitch>-15</pitch>
-			<yaw>158</yaw>
+			<pitch>40</pitch>
+			<yaw>136</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0" g="0" b="0" a="0" />

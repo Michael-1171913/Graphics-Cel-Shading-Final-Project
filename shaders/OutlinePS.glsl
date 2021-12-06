@@ -8,6 +8,6 @@ in vec4 color;
 out vec4 outColor;
 
 void main() {
-   outColor = vec4(color) * texture(texBird, uv);
+   outColor = vec4(color);
    //* texture(texEye, uv);
 }

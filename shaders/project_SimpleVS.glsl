@@ -28,8 +28,8 @@ out vec2 uv;
 
 void main(void)
 {
-	light_pos.x = sin(time) * 50;
-	light_pos.z = cos(time) * 50;
+	// light_pos.x = sin(time) * 50;
+	// light_pos.z = cos(time) * 50;
 
     // Calculate view-space coordinate
     vec4 P = modelView * vec4(pos, 1);
@@ -56,8 +56,9 @@ void main(void)
                     specular_albedo;
 
     // Send the color output to the fragment shader
-    color = vec4(ambient, 1) + vec4(diffuse, 1) + vec4(specular, 1); 
-    //color = vec4(1);
+    color = vec4(ambient, 1) + vec4(diffuse, 1) + vec4(specular, 1);
+    
+    //color = vec4(0.5);
     uv = texCoord;
 
     // Calculate the clip-space position of each vertex

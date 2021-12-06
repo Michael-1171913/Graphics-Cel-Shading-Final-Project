@@ -17,17 +17,6 @@
 					<y>-3.84113789</y>
 					<z>-0.624910355</z>
 				</item>
-				<item name="Triangle" type="geometry">
-					<type>Cube</type>
-					<width>1</width>
-					<height>1</height>
-					<depth>1</depth>
-					<scaleX>17.8299999</scaleX>
-					<scaleY>1.48000002</scaleY>
-					<scaleZ>18.2199993</scaleZ>
-					<y>-1.97599995</y>
-					<topology>TriangleList</topology>
-				</item>
 			</items>
 			<itemvalues />
 			<variables>
@@ -53,36 +42,41 @@
 					<width>1</width>
 					<height>1</height>
 					<depth>1</depth>
-					<scaleX>10</scaleX>
-					<scaleY>10</scaleY>
-					<scaleZ>10</scaleZ>
+					<scaleX>50</scaleX>
+					<scaleY>5.26999998</scaleY>
+					<scaleZ>50</scaleZ>
+					<y>-9.22000027</y>
 					<topology>TriangleList</topology>
 				</item>
 			</items>
 			<itemvalues />
+			<variables>
+				<variable type="float4x4" name="matVP" system="ViewProjection" />
+				<variable type="float4x4" name="matGeo" system="GeometryTransform" />
+				<variable type="float" name="time" system="Time" />
+			</variables>
 			<macros />
 		</pass>
 	</pipeline>
 	<objects>
-		<object type="texture" path="Textures\bird texture.png" vflip="true" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat" />
-		<object type="texture" path="Textures\Bbkt_eye.4.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
+		<object type="texture" path="Textures\bird texture.png" vflip="true" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
 			<bind slot="0" name="Simple" />
 		</object>
+		<object type="texture" path="Textures\Bbkt_eye.4.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat" />
 		<object type="texture" path="Textures\sky texutre.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
 			<bind slot="0" name="Sky Box" />
 		</object>
 	</objects>
 	<cameras />
 	<settings>
-		<entry type="property" name="Cube" item="pipe" />
+		<entry type="file" name="Sky Box" shader="ps" />
+		<entry type="file" name="Sky Box" shader="vs" />
 		<entry type="file" name="Simple" shader="ps" />
 		<entry type="file" name="Simple" shader="vs" />
-		<entry type="file" name="Sky Box" shader="vs" />
-		<entry type="file" name="Sky Box" shader="ps" />
 		<entry type="camera" fp="false">
-			<distance>30</distance>
-			<pitch>15</pitch>
-			<yaw>212</yaw>
+			<distance>50</distance>
+			<pitch>38</pitch>
+			<yaw>235</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0" g="0" b="0" a="0" />

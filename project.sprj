@@ -1,6 +1,62 @@
 <?xml version="1.0"?>
 <project version="2">
 	<pipeline>
+		<pass name="Outline" type="shader" active="true" patchverts="1">
+			<shader type="vs" path="shaders\OutlineVS.glsl" entry="main" />
+			<shader type="ps" path="shaders\OutlinePS.glsl" entry="main" />
+			<inputlayout>
+				<item value="Position" semantic="POSITION" />
+				<item value="Normal" semantic="NORMAL" />
+				<item value="Texcoord" semantic="TEXCOORD0" />
+			</inputlayout>
+			<rendertexture />
+			<items>
+				<item name="Outline_Bird_normals" type="renderstate">
+					<cullfront>true</cullfront>
+					<blend>false</blend>
+					<alpha2coverage>false</alpha2coverage>
+					<colorsrcfactor>Source Alpha</colorsrcfactor>
+					<colordstfactor>Inverse Source Alpha</colordstfactor>
+					<colorfunc>Add</colorfunc>
+					<alphasrcfactor>Source Alpha</alphasrcfactor>
+					<alphadstfactor>Inverse Source Alpha</alphadstfactor>
+					<alphafunc>Add</alphafunc>
+					<blendfactor_r>1</blendfactor_r>
+					<blendfactor_g>1</blendfactor_g>
+					<blendfactor_b>1</blendfactor_b>
+					<blendfactor_a>1</blendfactor_a>
+					<depthtest>true</depthtest>
+					<depthclamp>true</depthclamp>
+					<depthmask>true</depthmask>
+					<depthfunc>Less</depthfunc>
+					<depthbias>0</depthbias>
+					<stenciltest>false</stenciltest>
+					<stencilmask>0</stencilmask>
+					<stencilref>255</stencilref>
+					<stencilfrontfunc>Equal</stencilfrontfunc>
+					<stencilbackfunc>Equal</stencilbackfunc>
+					<stencilfrontpass>Keep</stencilfrontpass>
+					<stencilbackpass>Keep</stencilbackpass>
+					<stencilfrontfail>Keep</stencilfrontfail>
+					<stencilbackfail>Keep</stencilbackfail>
+					<depthfrontfail>Keep</depthfrontfail>
+					<depthbackfail>Keep</depthbackfail>
+				</item>
+				<item name="outline_bird" type="model">
+					<filepath>3D Objects\bird.obj</filepath>
+					<grouponly>false</grouponly>
+					<scaleX>1.01499999</scaleX>
+					<scaleY>1.01499999</scaleY>
+					<scaleZ>1.01499999</scaleZ>
+				</item>
+			</items>
+			<itemvalues />
+			<variables>
+				<variable type="float4x4" name="matGeo" system="GeometryTransform" />
+				<variable type="float4x4" name="matVP" system="ViewProjection" />
+			</variables>
+			<macros />
+		</pass>
 		<pass name="Simple" type="shader" active="true" patchverts="1">
 			<shader type="vs" path="shaders\project_SimpleVS.glsl" entry="main" />
 			<shader type="ps" path="shaders\project_SimplePS.glsl" entry="main" />
@@ -11,11 +67,21 @@
 			</inputlayout>
 			<rendertexture />
 			<items>
-				<item name="Bird" type="model">
+				<item name="bird" type="model">
 					<filepath>3D Objects\bird.obj</filepath>
 					<grouponly>false</grouponly>
-					<y>-3.84113789</y>
-					<z>-0.624910355</z>
+				</item>
+				<item name="Cube3" type="geometry">
+					<type>Cube</type>
+					<width>1</width>
+					<height>1</height>
+					<depth>1</depth>
+					<scaleX>2.56999993</scaleX>
+					<scaleY>2.24000001</scaleY>
+					<scaleZ>2.18000007</scaleZ>
+					<y>6.82000017</y>
+					<z>9.5</z>
+					<topology>TriangleList</topology>
 				</item>
 			</items>
 			<itemvalues />
@@ -69,17 +135,17 @@
 	</objects>
 	<cameras />
 	<settings>
-		<entry type="file" name="Sky Box" shader="ps" />
-		<entry type="file" name="Sky Box" shader="vs" />
+		<entry type="file" name="Outline" shader="ps" />
+		<entry type="file" name="Outline" shader="vs" />
 		<entry type="file" name="Simple" shader="ps" />
 		<entry type="file" name="Simple" shader="vs" />
 		<entry type="camera" fp="false">
-			<distance>50</distance>
-			<pitch>38</pitch>
-			<yaw>235</yaw>
+			<distance>16</distance>
+			<pitch>7</pitch>
+			<yaw>188</yaw>
 			<roll>360</roll>
 		</entry>
-		<entry type="clearcolor" r="0" g="0" b="0" a="0" />
+		<entry type="clearcolor" r="0.509803951" g="0.729411781" b="0.70588237" a="0" />
 		<entry type="usealpha" val="false" />
 	</settings>
 	<plugindata />

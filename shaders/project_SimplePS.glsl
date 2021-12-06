@@ -8,6 +8,23 @@ in vec4 color;
 out vec4 outColor;
 
 void main() {
-   outColor = vec4(color) * texture(texBird, uv);
-   //* texture(texEye, uv);
+    vec4 newCol = color;
+    float isShaded;
+    /*
+    isShaded = step(length(newCol), 3.1);
+    
+    newCol = newCol * isShaded;
+    */
+    
+    if(length(newCol) < 3.1)
+    {
+      newCol = vec4(vec3(0.5), 1);
+    }
+    else
+    {
+      newCol = vec4(vec3(1), 1);
+    }
+    
+
+   outColor = vec4(newCol) * texture(texBird, uv);
 }

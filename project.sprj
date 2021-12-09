@@ -135,14 +135,12 @@
 	</objects>
 	<cameras />
 	<settings>
-		<entry type="file" name="Outline" shader="ps" />
-		<entry type="file" name="Outline" shader="vs" />
 		<entry type="file" name="Simple" shader="ps" />
 		<entry type="file" name="Simple" shader="vs" />
 		<entry type="camera" fp="false">
-			<distance>16</distance>
-			<pitch>7</pitch>
-			<yaw>188</yaw>
+			<distance>20</distance>
+			<pitch>22</pitch>
+			<yaw>148</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0.509803951" g="0.729411781" b="0.70588237" a="0" />

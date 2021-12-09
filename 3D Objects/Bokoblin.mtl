@@ -1,0 +1,14 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl m6
+Ns 92.156872
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.224510 0.224510 0.224510
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 9
+map_Kd C:\\Users\\Michael\\Desktop\\vf_0SS05.png
+map_d C:\\Users\\Michael\\Desktop\\vf_0SS05.png

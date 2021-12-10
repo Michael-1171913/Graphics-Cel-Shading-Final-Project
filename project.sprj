@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project version="2">
 	<pipeline>
-		<pass name="Outline" type="shader" active="false" patchverts="1">
+		<pass name="Outline" type="shader" active="false" patchverts="1" collapsed="true">
 			<shader type="vs" path="shaders\OutlineVS.glsl" entry="main" />
 			<shader type="ps" path="shaders\OutlinePS.glsl" entry="main" />
 			<inputlayout>
@@ -57,7 +57,7 @@
 			</variables>
 			<macros />
 		</pass>
-		<pass name="Simple" type="shader" active="false" patchverts="1">
+		<pass name="Simple" type="shader" active="false" patchverts="1" collapsed="true">
 			<shader type="vs" path="shaders\project_SimpleVS.glsl" entry="main" />
 			<shader type="ps" path="shaders\project_SimplePS.glsl" entry="main" />
 			<inputlayout>
@@ -90,7 +90,46 @@
 				<item value="Texcoord" semantic="TEXCOORD0" />
 			</inputlayout>
 			<rendertexture />
-			<items />
+			<items>
+				<item name="BokoblinOutline_RenderState" type="renderstate">
+					<cullfront>true</cullfront>
+					<blend>false</blend>
+					<alpha2coverage>false</alpha2coverage>
+					<colorsrcfactor>Source Alpha</colorsrcfactor>
+					<colordstfactor>Inverse Source Alpha</colordstfactor>
+					<colorfunc>Add</colorfunc>
+					<alphasrcfactor>Source Alpha</alphasrcfactor>
+					<alphadstfactor>Inverse Source Alpha</alphadstfactor>
+					<alphafunc>Add</alphafunc>
+					<blendfactor_r>1</blendfactor_r>
+					<blendfactor_g>1</blendfactor_g>
+					<blendfactor_b>1</blendfactor_b>
+					<blendfactor_a>1</blendfactor_a>
+					<depthtest>true</depthtest>
+					<depthclamp>true</depthclamp>
+					<depthmask>true</depthmask>
+					<depthfunc>Less</depthfunc>
+					<depthbias>0</depthbias>
+					<stenciltest>false</stenciltest>
+					<stencilmask>0</stencilmask>
+					<stencilref>255</stencilref>
+					<stencilfrontfunc>Equal</stencilfrontfunc>
+					<stencilbackfunc>Equal</stencilbackfunc>
+					<stencilfrontpass>Keep</stencilfrontpass>
+					<stencilbackpass>Keep</stencilbackpass>
+					<stencilfrontfail>Keep</stencilfrontfail>
+					<stencilbackfail>Keep</stencilbackfail>
+					<depthfrontfail>Keep</depthfrontfail>
+					<depthbackfail>Keep</depthbackfail>
+				</item>
+				<item name="BokoblinOutline" type="model">
+					<filepath>3D Objects\Bokoblin.obj</filepath>
+					<grouponly>false</grouponly>
+					<scaleX>1.01499999</scaleX>
+					<scaleY>1.01499999</scaleY>
+					<scaleZ>1.01499999</scaleZ>
+				</item>
+			</items>
 			<itemvalues />
 			<variables>
 				<variable type="float4x4" name="matVP" system="ViewProjection" />
@@ -121,9 +160,9 @@
 				<variable type="float" name="time" system="Time" />
 				<variable type="float3" name="light_pos">
 					<row>
-						<value>14.8999996</value>
-						<value>27.6000004</value>
-						<value>-4.80000019</value>
+						<value>124.099998</value>
+						<value>186</value>
+						<value>-60.4000015</value>
 					</row>
 				</variable>
 			</variables>
@@ -168,7 +207,7 @@
 		<object type="texture" path="Textures\sky texutre.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
 			<bind slot="0" name="Sky Box" />
 		</object>
-		<object type="texture" path="Textures\bokoblin texture.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
+		<object type="texture" path="Textures\bokoblin texture.png" vflip="true" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat">
 			<bind slot="0" name="Bokoblin" />
 		</object>
 	</objects>
@@ -178,9 +217,9 @@
 		<entry type="file" name="Bokoblin" shader="vs" />
 		<entry type="pinned" name="light_pos" owner="Bokoblin" />
 		<entry type="camera" fp="false">
-			<distance>27</distance>
-			<pitch>13</pitch>
-			<yaw>197</yaw>
+			<distance>18</distance>
+			<pitch>6</pitch>
+			<yaw>178</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0.423529416" g="0.513725519" b="0.65882355" a="0" />

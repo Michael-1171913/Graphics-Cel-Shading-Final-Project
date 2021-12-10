@@ -158,13 +158,6 @@
 				<variable type="float4x4" name="matGeo" system="View" />
 				<variable type="float4x4" name="proj_matrix" system="GeometryTransform" />
 				<variable type="float" name="time" system="Time" />
-				<variable type="float3" name="light_pos">
-					<row>
-						<value>124.099998</value>
-						<value>186</value>
-						<value>-60.4000015</value>
-					</row>
-				</variable>
 			</variables>
 			<macros />
 		</pass>
@@ -213,13 +206,11 @@
 	</objects>
 	<cameras />
 	<settings>
-		<entry type="file" name="Bokoblin" shader="ps" />
 		<entry type="file" name="Bokoblin" shader="vs" />
-		<entry type="pinned" name="light_pos" owner="Bokoblin" />
 		<entry type="camera" fp="false">
-			<distance>18</distance>
-			<pitch>6</pitch>
-			<yaw>178</yaw>
+			<distance>28</distance>
+			<pitch>5</pitch>
+			<yaw>182</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0.423529416" g="0.513725519" b="0.65882355" a="0" />

@@ -12,7 +12,7 @@ uniform mat4 proj_matrix;
 
 uniform float time;
 
-uniform vec3 light_pos;
+vec3 light_pos = vec3(100, 20, 30);
 
 mat4 modelView = view_matrix * matGeo;
 
@@ -29,8 +29,10 @@ out vec2 uv;
 
 void main(void)
 {
-	//light_pos.x = sin(time) * 10 - 5;
-	//light_pos.z = cos(time) * 10 - 5;
+	light_pos.x = cos(time / 2) * 50;
+	light_pos.y = cos(time / 4) + 25;
+
+	
 
     // Calculate view-space coordinate
     vec4 P = modelView * vec4(pos, 1);

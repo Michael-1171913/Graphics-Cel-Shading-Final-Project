@@ -1,1 +1,5 @@
-3d model: https://www.models-resource.com/gamecube/legendofzeldathewindwaker/model/20914/
+3d model & texture #1:
+  https://www.models-resource.com/gamecube/legendofzeldathewindwaker/model/20914/
+
+3d model & texture #2:
+  https://www.models-resource.com/gamecube/legendofzeldathewindwaker/model/21782/

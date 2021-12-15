@@ -81,7 +81,7 @@
 			</variables>
 			<macros />
 		</pass>
-		<pass name="OutlineBokoblin" type="shader" active="true" patchverts="1">
+		<pass name="OutlineBokoblin" type="shader" active="true" patchverts="1" collapsed="true">
 			<shader type="vs" path="shaders\OutlineBokoblinVS.glsl" entry="main" />
 			<shader type="ps" path="shaders\OutlineBokoblinPS.glsl" entry="main" />
 			<inputlayout>
@@ -137,7 +137,7 @@
 			</variables>
 			<macros />
 		</pass>
-		<pass name="Bokoblin" type="shader" active="true" patchverts="1">
+		<pass name="Bokoblin" type="shader" active="true" patchverts="1" collapsed="true">
 			<shader type="vs" path="shaders\BokoblinVS.glsl" entry="main" />
 			<shader type="ps" path="shaders\BokoblinPS.glsl" entry="main" />
 			<inputlayout>
@@ -161,7 +161,7 @@
 			</variables>
 			<macros />
 		</pass>
-		<pass name="Sky Box" type="shader" active="false" patchverts="1">
+		<pass name="Sky Box" type="shader" active="false" patchverts="1" collapsed="true">
 			<shader type="vs" path="shaders\Sky BoxVS.glsl" entry="main" />
 			<shader type="ps" path="shaders\Sky BoxPS.glsl" entry="main" />
 			<inputlayout>
@@ -206,9 +206,9 @@
 	</objects>
 	<cameras />
 	<settings>
-		<entry type="file" name="Bokoblin" shader="vs" />
+		<entry type="property" name="Textures/bokoblin texture.png" item="image3D" />
 		<entry type="camera" fp="false">
-			<distance>28</distance>
+			<distance>17</distance>
 			<pitch>5</pitch>
 			<yaw>182</yaw>
 			<roll>360</roll>
